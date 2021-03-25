@@ -31,6 +31,6 @@
 
 (keyword-in-set valid-suite? :suite #{"hearts" "spades" "clubs" "diamonds"})
 
-(valid-suite? {:suite "spades"})
-(valid-suite? {:suite "circles"})
+(valid-suite? {:suite "spades" :rank "king"})
+(valid-suite? {:suite "circles" :rank 8})
 
