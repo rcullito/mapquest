@@ -7,24 +7,38 @@ a tiny clojure library of functions and macros for dealing with maps
 `merge-left` - useful when the desired behavior is for keys to be preserved in a left to right manner
 
 ```
-(merge-left {:emergency-contact "917-283-3482"} {:emergency-contact "911"}) => {:emergency-contact "917-283-3482"}
+(merge-left 
+    {:emergency-contact "917-283-3482"} 
+    {:emergency-contact "911"}) 
+=> {:emergency-contact "917-283-3482"}
 ```
 
 
 `reset-map-index` - takes a map, strips the values, and then assigns those values to keys starting from 0
 
 ```
-(reset-map-index {3 "rock" 4 "pebble" 6 "stone"}) => {0 "rock" 1 "pebble" 2 "stone"}
+(reset-map-index {3 "rock" 4 "pebble" 6 "stone"}) 
+=> {0 "rock" 1 "pebble" 2 "stone"}
 ```
 
 
-`keyword-in-set` - macro to create one-off helper fns that check a key in a map against set membership
+`keyword-in-set` - macro to create one-off predicates that check a key in a map against set membership
 
 ```
-(keyword-in-set valid-suite? :suite #{"hearts" "spades" "clubs" "diamonds"})
+;; define predicate
+(keyword-in-set 
+    valid-suite? 
+    :suite 
+    #{"hearts" "spades" "clubs" "diamonds"})
+=> #'user/keyword-in-set
 
-(valid-suite? {:suite "spades" :rank "king"}) => "spades"
-(valid-suite? {:suite "circles" :rank 8}) => nil 
+;; call predicate on example map
+(valid-suite? {:suite "spades" :rank "king"}) 
+=> "spades"
+
+;; call predicate on another example map
+(valid-suite? {:suite "circles" :rank 8}) 
+=> nil 
 ```
 
 ## License
