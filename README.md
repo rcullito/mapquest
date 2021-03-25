@@ -14,11 +14,28 @@ a tiny clojure library of functions and macros for dealing with maps
 ```
 
 
-`reset-map-index` - takes a map, strips the values, and then assigns those values to keys starting from 0
+`reset-index` - takes a map, and assigns its values to keys starting from 0
 
 ```
-(reset-map-index {3 "rock" 4 "pebble" 6 "stone"}) 
+(reset-index {3 "rock" 4 "pebble" 6 "stone"}) 
 => {0 "rock" 1 "pebble" 2 "stone"}
+```
+
+
+`embellish` - if test is truthy, assoc k and v onto map, else return map
+
+```
+(let [hungry? true]
+  (embellish
+   hungry?  :food "purina"
+   {:dog "claire"}))
+=> {:dog "claire" :food "purina"}
+
+(let [hungry? false]
+  (embellish
+   hungry? :food "mcdonalds"
+   {:dog "claire"}))
+=> {:dog "claire"}
 ```
 
 
@@ -40,6 +57,7 @@ a tiny clojure library of functions and macros for dealing with maps
 (valid-suite? {:suite "circles" :rank 8}) 
 => nil 
 ```
+
 
 ## License
 
