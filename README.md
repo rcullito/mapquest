@@ -4,13 +4,21 @@ a tiny clojure library of functions and macros for dealing with maps
 
 ## Rationale
 
-merge-left - useful when the desired behavior is for keys to be preserved in a left to right manner
+`merge-left` - useful when the desired behavior is for keys to be preserved in a left to right manner
 
 ```
 (merge-left {:emergency-contact "917-283-3482"} {:emergency-contact "911"}) => {:emergency-contact "917-283-3482"}
 ```
 
-keyword-in-set - macro to create one-off helper fns that check a key in a map against set membership
+
+`reset-map-index` - takes a map, strips the values, and then assigns those values to keys starting from 0
+
+```
+(reset-map-index {3 "rock" 4 "pebble" 6 "stone"}) => {0 "rock" 1 "pebble" 2 "stone"}
+```
+
+
+`keyword-in-set` - macro to create one-off helper fns that check a key in a map against set membership
 
 ```
 (keyword-in-set valid-suite? :suite #{"hearts" "spades" "clubs" "diamonds"})
@@ -18,8 +26,6 @@ keyword-in-set - macro to create one-off helper fns that check a key in a map ag
 (valid-suite? {:suite "spades" :rank "king"}) => "spades"
 (valid-suite? {:suite "circles" :rank 8}) => nil 
 ```
-
-
 
 ## License
 

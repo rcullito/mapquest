@@ -12,6 +12,10 @@
   (zipmap (range) (vals map-of-things)))
 
 
+
+(reset-map-index {3 "rock" 4 "pebble" 6 "stone"})
+
+
 (defmacro embellish
   "if test is truthy, assoc k and v onto map, else return map"
   [test m k v]
