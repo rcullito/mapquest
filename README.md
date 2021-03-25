@@ -6,6 +6,9 @@ a tiny clojure library of functions and macros for dealing with maps
 
 merge-left - useful when the desired behavior is for keys to be preserved in a left to right manner
 
+```
+(merge-left {:emergency-contact "917-283-3482"} {:emergency-contact "911"}) => {:emergency-contact "917-283-3482"}
+```
 
 keyword-in-set - macro to create one-off helper fns that check a key in a map against set membership
 
