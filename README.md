@@ -1,5 +1,7 @@
 # mapquest
 
+[![cljdoc badge](https://cljdoc.org/badge/mapqeust/mapquest)](https://cljdoc.org/d/mapquest/mapquest/CURRENT)
+
 a tiny clojure library of functions and macros for dealing with maps
 
 ## Rationale
