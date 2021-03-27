@@ -8,7 +8,11 @@ a tiny clojure library of functions and macros for dealing with maps
 
 ## Rationale
 
-`merge-left` - useful when the desired behavior is for keys to be preserved in a left to right manner
+merge-left
+
+(merge-left & maps)
+
+preserves keys in earlier maps
 
 ```
 (merge-left 
@@ -18,7 +22,11 @@ a tiny clojure library of functions and macros for dealing with maps
 ```
 
 
-`reset-index` - takes a map, and assigns its values to keys starting from 0
+reset-index
+
+(reset-index map)
+
+takes a map, and assigns its values to keys starting from 0
 
 ```
 (reset-index {3 "rock" 4 "pebble" 6 "stone"}) 
@@ -26,7 +34,11 @@ a tiny clojure library of functions and macros for dealing with maps
 ```
 
 
-`embellish` - if test is truthy, assoc k and v onto map, else return map
+embellish
+
+(embellish test k v m)
+
+if test is truthy, assoc k and v onto map, else return map
 
 ```
 (let [hungry? true]
@@ -43,7 +55,11 @@ a tiny clojure library of functions and macros for dealing with maps
 ```
 
 
-`keyword-in-set` - macro to create one-off predicates that check a key in a map against set membership
+keyword-in-set
+
+(keyword-in-set name k set)
+
+defines a predicate that accepts a map, and tests a key from that map for set membership
 
 ```
 ;; define predicate

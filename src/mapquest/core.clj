@@ -8,8 +8,8 @@
 
 (defn reset-index
   "takes a map, and assigns its values to keys starting from 0"
-  [map-of-things]
-  (zipmap (range) (vals map-of-things)))
+  [map]
+  (zipmap (range) (vals map)))
 
 (defmacro embellish
   "if test is truthy, assoc k and v onto map, else return map"
