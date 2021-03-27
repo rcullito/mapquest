@@ -6,7 +6,7 @@
 
 a tiny clojure library of functions and macros for dealing with maps
 
-## Rationale
+## Examples
 
 ### merge-left
 
