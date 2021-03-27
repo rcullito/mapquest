@@ -8,7 +8,7 @@ a tiny clojure library of functions and macros for dealing with maps
 
 ## Rationale
 
-merge-left
+#### merge-left
 
 (merge-left & maps)
 
@@ -22,7 +22,7 @@ preserves keys in earlier maps
 ```
 
 
-reset-index
+#### reset-index
 
 (reset-index map)
 
@@ -34,7 +34,7 @@ takes a map, and assigns its values to keys starting from 0
 ```
 
 
-embellish
+#### embellish
 
 (embellish test k v m)
 
@@ -55,7 +55,7 @@ if test is truthy, assoc k and v onto map, else return map
 ```
 
 
-keyword-in-set
+#### keyword-in-set
 
 (keyword-in-set name k set)
 
