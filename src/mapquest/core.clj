@@ -13,8 +13,8 @@
 
 (defmacro embellish
   "if test is truthy, assoc k and v onto map, else return map"
-  [test k v m]
-  `(cond-> ~m
+  [test k v map]
+  `(cond-> ~map
      ~test (assoc ~k ~v)))
 
 (defmacro keyword-in-set

@@ -36,7 +36,7 @@ takes a map, and assigns its values to keys starting from 0
 
 ### embellish
 
-(embellish test k v m)
+(embellish test k v map)
 
 if test is truthy, assoc k and v onto map, else return map
 
