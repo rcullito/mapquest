@@ -2,6 +2,9 @@
 
 [![cljdoc badge](https://cljdoc.org/badge/mapquest/mapquest)](https://cljdoc.org/d/mapquest/mapquest/CURRENT)
 
+> "It is not down on any map. True places never are."
+> - Herman Melville
+
 a tiny clojure library of functions and macros for dealing with maps
 
 ## Rationale
